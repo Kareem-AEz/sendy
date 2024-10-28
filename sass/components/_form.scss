@@ -11,9 +11,6 @@ select {
 	@media (max-width: 37em) {
 		font-size: 90%;
 	}
-	@media (max-width: 26.25em) {
-		width: 9rem;
-	}
 
 	&::placeholder {
 		color: $color-grey-500;

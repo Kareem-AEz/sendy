@@ -1,0 +1,15 @@
+{
+	"short_name": "Sendy",
+	"name": "Sendy - Manage Your Finances with Ease",
+	"icons": [
+		{
+			"src": "web-assets/sendy-favicon.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"start_url": "https://kareem-aez.github.io/sendy/",
+	"display": "standalone",
+	"theme_color": "#2b5869",
+	"background_color": "#2b5869"
+}

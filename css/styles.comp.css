@@ -137,6 +137,12 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 1.2rem; }
+    @media (max-width: 26.25em) {
+      .header__login {
+        gap: 0.2rem; } }
+    @media (max-width: 26.25em) {
+      .header__login input {
+        width: 9rem; } }
 
 .login__button {
   font-size: 2.4rem;
@@ -164,10 +170,6 @@ select {
     input,
     select {
       font-size: 90%; } }
-  @media (max-width: 26.25em) {
-    input,
-    select {
-      width: 9rem; } }
   input::placeholder,
   select::placeholder {
     color: #888;
@@ -296,8 +298,8 @@ select {
   grid-auto-flow: column;
   grid-auto-columns: 20rem; }
   .modal__info::-webkit-scrollbar {
-    width: 10px;
-    height: 10px; }
+    width: 1rem;
+    height: 1rem; }
   .modal__info::-webkit-scrollbar-track {
     background-color: #dadada;
     border-radius: 8px; }
@@ -403,6 +405,15 @@ main {
     .section__close {
       grid-column: 2 / 3;
       grid-row: 1/2; } }
+
+footer {
+  margin-top: 6.8rem;
+  padding: 2.2rem 4.2rem; }
+  footer p {
+    color: #2b5869;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center; }
 
 .section__movements {
   display: grid;

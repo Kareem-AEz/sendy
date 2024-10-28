@@ -58,3 +58,14 @@ main {
 		}
 	}
 }
+
+footer {
+	margin-top: $section-space;
+	padding: $padding-md;
+	p {
+		color: $color-main-blue;
+		font-size: 1.6rem;
+		font-weight: 600;
+		text-align: center;
+	}
+}
