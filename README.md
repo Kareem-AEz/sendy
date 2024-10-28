@@ -31,9 +31,7 @@ Sendy is a dynamic, interactive web application for managing personal accounts a
 
 ## Demo
 
-**Link**: [Demo Video or Live Site URL]
-
-A live demo of .Sendy can be accessed [here](https://example.com).
+A live demo of Sendy can be accessed [here](#).
 
 ---
 
