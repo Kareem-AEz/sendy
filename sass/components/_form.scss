@@ -1,0 +1,19 @@
+input,
+select {
+	border-radius: $border-radius-round;
+	padding: $padding-sm;
+	border: none;
+	color: $color-grey-700;
+	background-color: $color-grey-50;
+	@media (max-width: 60em) {
+		font-size: 100%;
+	}
+	@media (max-width: 37em) {
+		font-size: 70%;
+	}
+
+	&::placeholder {
+		color: $color-grey-500;
+		font-weight: 500;
+	}
+}

@@ -1,0 +1,66 @@
+/*      -----colors-----      */
+// colors main
+$color-main-blue: #2b5869;
+$color-main-light-blue: #dbf7ff;
+$color-main-red: #9b2d2d;
+$color-main-light-red: #ffe4e4;
+
+// colors secondary
+$color-gradient-light: #e1f9ff;
+$color-gradient-dark: #76daf7;
+$color-sec-blue: #44788b;
+
+// colors accent
+
+// colors neutral
+$color-grey-900: #2f2f2f;
+$color-grey-700: #444;
+$color-grey-600: #666;
+$color-grey-500: #888;
+$color-grey-300: #b5b5b5;
+$color-grey-200: #dadada;
+$color-grey-100: #ededed;
+$color-grey-50: #fafafa;
+
+// border
+$border: 2px solid $color-grey-200;
+
+// shadows
+$box-shadow-1: 0 1rem 3rem rgba($color-grey-900, 0.8);
+$box-shadow-2: 0.6rem 0.6rem 0.8rem rgba($color-grey-900, 0.4);
+
+/*      -----border radius-----      */
+$border-radius-sm: 1.4rem;
+$border-radius-md: 2.4rem;
+$border-radius-lg: 3.2rem;
+$border-radius-round: 100rem;
+
+/*      -----space-----      */
+// sections
+$section-space: 6.8rem;
+
+// gutters
+$gutter-space-xs: 0.8rem;
+$gutter-space-sm: 1.8rem;
+$gutter-space-md: 2.2rem;
+$gutter-space-lg: 3.2rem;
+
+/*      -----fonts-----      */
+$header-width: 160rem;
+$content-width: 140rem;
+
+/*      -----padding-----      */
+$padding-md-value: 4.2rem;
+$padding-md: 2.2rem 4.2rem;
+$padding-sm: 0.8rem 1.2rem;
+$padding-xs: 0.4rem 0.8rem;
+
+/*      -----fonts-----      */
+// fonts
+$font-sec: "Lobster", sans-serif;
+$font-family: "Poppins", sans-serif;
+$font-size-default: 1.4rem;
+
+/*      -----easing-----      */
+$ez-bz: cubic-bezier(0.2, 0, 0.4, 1);
+$ez-bz-2: cubic-bezier(0.35, 0, 0.25, 1);

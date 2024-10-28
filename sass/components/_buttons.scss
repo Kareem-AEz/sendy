@@ -1,0 +1,68 @@
+.btn {
+	padding: $padding-xs;
+	border-radius: $border-radius-sm;
+	transition: background-color 0.168s $ez-bz;
+	color: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	font-weight: 600;
+
+	&--primary {
+		background-color: $color-main-blue;
+		color: $color-main-light-blue;
+
+		&:hover {
+			background-color: $color-sec-blue;
+		}
+	}
+	&--primary-light {
+		background-color: $color-grey-200;
+		color: $color-grey-900;
+
+		&:hover {
+			background-color: $color-grey-300;
+		}
+	}
+	&--primary-red {
+		background-color: $color-main-red;
+		color: $color-main-light-red;
+
+		&:hover {
+			background-color: lighten($color-main-red, 10);
+		}
+	}
+
+	&--light {
+		background-color: $color-grey-200;
+		color: $color-grey-600;
+		font-weight: 500;
+		border: 1px solid $color-grey-300;
+
+		&:hover {
+			background-color: lighten($color-grey-200, 4);
+		}
+	}
+}
+
+.modal__btn {
+	height: 1.8rem;
+	width: 1.8rem;
+	background-color: $color-grey-200;
+	border-radius: 4px;
+
+	position: relative;
+
+	&[aria-checked="true"]::after {
+		content: "";
+		height: 1.4rem;
+		width: 1.4rem;
+		background-color: $color-main-blue;
+		border-radius: 4px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+	}
+}

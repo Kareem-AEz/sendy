@@ -1,0 +1,53 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: $padding-md;
+
+	max-width: $header-width;
+	margin: 0 auto;
+
+	&__logo {
+		font-family: $font-sec;
+		font-size: 3.2rem;
+	}
+
+	&__info-button {
+		font-family: $font-sec;
+		font-size: 3.2rem;
+		height: 3rem;
+		width: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		margin-right: 2.2rem;
+		color: inherit;
+
+		border: 2px solid $color-main-blue;
+		padding: 1.8rem 1.8rem;
+		border-radius: 100%;
+	}
+
+	&__login {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.2rem;
+	}
+}
+
+.login {
+	&__button {
+		font-size: 2.4rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__SVG {
+		fill: $color-main-light-blue;
+		height: 2.4rem;
+		width: 2.4rem;
+	}
+}

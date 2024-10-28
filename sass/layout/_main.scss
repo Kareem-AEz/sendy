@@ -1,0 +1,60 @@
+main {
+	display: grid;
+	grid-template-columns: 70fr 30fr;
+	grid-template-rows: [msg-start] auto [msg-end start] 80fr [mid] 20fr [end];
+	@media (max-width: 49em) {
+		min-height: 90rem;
+		grid-template-rows: 40fr 60fr;
+	}
+	column-gap: 2.4rem;
+	row-gap: 1.4rem;
+
+	max-height: 70rem;
+	padding: 0 $padding-md-value;
+	// padding-top: $section-space;
+
+	section {
+		background-color: $color-grey-100;
+		border-radius: $border-radius-md;
+		box-shadow: $box-shadow-2;
+		height: 20rem;
+		min-height: 100%;
+		width: 100%;
+
+		padding: $padding-md;
+	}
+}
+
+.welcome__message {
+	font-size: 3.2rem;
+	max-width: 140rem;
+	padding: 0 $padding-md-value;
+	padding-top: $section-space;
+	margin: 0 auto;
+	span {
+		font-weight: 500;
+	}
+}
+.section {
+	&__movements {
+		grid-row: start / end;
+		@media (max-width: 49em) {
+			grid-column: 1 / -1;
+			grid-row: 2/3;
+		}
+	}
+	&__actions {
+		grid-row: start / mid;
+		@media (max-width: 49em) {
+			grid-column: 1 / 2;
+			grid-row: 1/2;
+		}
+	}
+	&__close {
+		grid-row: mid / end;
+		@media (max-width: 49em) {
+			grid-column: 2 / 3;
+			grid-row: 1/2;
+		}
+	}
+}

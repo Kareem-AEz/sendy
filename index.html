@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<meta
+			name="description"
+			content=".Sendy is a secure and intuitive web app for managing personal finances. Easily send and request money, track transactions, and manage account settings in real-time."
+		/>
+		<meta
+			name="keywords"
+			content="Sendy, finance app, money transfer, personal finance, account management, transaction history, balance tracker"
+		/>
+		<title>.Sendy - Manage Your Finances with Ease</title>
+
+		<!-- Open Graph Meta Tags for Social Media (Facebook, LinkedIn) -->
+		<meta
+			property="og:title"
+			content="Sendy - Personal Finance and Money Transfer App"
+		/>
+		<meta
+			property="og:description"
+			content="Sendy offers an intuitive way to manage personal finances, send and request funds, and track transactions in various currencies."
+		/>
+		<meta
+			property="og:image"
+			content="https://kareem-aez.github.io/sendy/web-assets/sendy-og.jpg"
+		/>
+		<!-- Replace with actual image URL -->
+		<meta
+			property="og:url"
+			content="https://kareem-aez.github.io/sendy"
+		/>
+		<meta
+			property="og:type"
+			content="website"
+		/>
+
+		<!-- Twitter Meta Tags -->
+		<meta
+			name="twitter:card"
+			content="summary_large_image"
+		/>
+		<meta
+			name="twitter:title"
+			content="Sendy - Personal Finance and Money Transfer App"
+		/>
+		<meta
+			name="twitter:description"
+			content="Sendy enables easy money transfers, transaction tracking, and balance management with a user-friendly interface."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://kareem-aez.github.io/sendy/web-assets/sendy-twitter.jpg"
+		/>
+		<!-- Replace with actual image URL -->
+
+		<!-- Additional Meta Tags for Enhanced SEO -->
+		<link
+			rel="canonical"
+			href="https://kareem-aez.github.io/sendy"
+		/>
+		<meta
+			name="robots"
+			content="index, follow"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="css/styles.css"
+		/>
+
+		<!-- fonts -->
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="shortcut icon"
+			href="web-assets/sendy-favicon.png"
+			type="image/png"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__logo">.Sendy</h1>
+
+			<button class="header__info-button">i</button>
+
+			<form
+				action="#"
+				class="header__login"
+			>
+				<input
+					class="login__username"
+					type="text"
+					name="login__username"
+					id="login__username"
+					placeholder="Username"
+				/>
+				<input
+					class="login__pin"
+					type="text"
+					name="login__pin"
+					id="login__pin"
+					maxlength="4"
+					placeholder="Pin"
+				/>
+				<button
+					aria-label="login button"
+					class="btn btn--primary login__button"
+				>
+					<svg class="login__SVG">
+						<use xlink:href="sprite.svg#next"></use>
+					</svg>
+				</button>
+			</form>
+		</header>
+
+		<h2 class="welcome__message">Please login! <span></span></h2>
+
+		<div class="modal__window is-hidden">
+			<!-- info modal -->
+			<div class="modal__info-wrapper is-hidden">
+				<div class="modal__info">
+					<div class="info__account-number">
+						<p>Number</p>
+					</div>
+					<div class="info__account-name">
+						<p>Username</p>
+					</div>
+					<div class="info__account-pin">
+						<p>pin</p>
+					</div>
+					<div class="info__account-currency">
+						<p>Currency</p>
+					</div>
+					<div class="info__account-locale">
+						<p>locale</p>
+					</div>
+					<div class="info__account-movements">
+						<p>Movements Number</p>
+					</div>
+					<div class="info__account-balance">
+						<p>balance</p>
+					</div>
+				</div>
+				<button
+					role="cancel"
+					class="btn btn--primary"
+				>
+					Done
+				</button>
+			</div>
+
+			<!-- info modal -->
+			<div
+				class="modal is-hidden"
+				role="dialog"
+				aria-labelledby="modal-title"
+				aria-describedby="modal-content"
+			>
+				<button
+					class="modal__close"
+					aria-label="Close modal"
+				>
+					x
+				</button>
+				<!-- Close button -->
+				<h2
+					class="modal__title"
+					id="modal-title"
+				>
+					Close Account – Donation of Remaining Balance
+				</h2>
+				<div class="modal__content-wrapper">
+					<p
+						class="modal__content"
+						id="modal-content"
+					>
+						You have a balance of <strong>$X.XX</strong> in your account. By
+						closing your account, the remaining balance will be automatically
+						donated to <strong>Charity</strong>. This action is permanent, and
+						your account will be closed forever. Are you sure you want to
+						proceed and donate the balance?
+					</p>
+					<div
+						class="modal__checkbox is-hidden"
+						tabindex="0"
+					>
+						<button
+							class="modal__btn"
+							aria-label="checkbox"
+							aria-checked="false"
+						></button>
+						<p>*yes, I agree</p>
+					</div>
+				</div>
+				<div class="modal__buttons">
+					<!-- Your buttons go here -->
+					<button
+						role="cancel"
+						class="btn btn--primary-light"
+					>
+						Cancel
+					</button>
+					<button
+						role="leave"
+						class="btn btn--primary-red"
+					>
+						Leave Sendy
+					</button>
+				</div>
+			</div>
+			<div class="modal__bg"></div>
+		</div>
+		<main class="container is-hidden">
+			<section class="section__movements">
+				<header class="movements__header">
+					<h2 class="section__title">Transactions</h2>
+					<nav class="movements__nav">
+						<ul class="movements__list">
+							<li
+								data-index="1"
+								class="movements__item"
+							>
+								<button class="btn movements__link">All</button>
+							</li>
+							<li
+								data-index="2"
+								class="movements__item"
+							>
+								<button class="btn movements__link">Incoming</button>
+							</li>
+							<li
+								data-index="3"
+								class="movements__item"
+							>
+								<button class="btn movements__link">Outcoming</button>
+							</li>
+							<li
+								data-index="4"
+								class="movements__item"
+							>
+								<button class="btn movements__link">Requests</button>
+							</li>
+						</ul>
+						<div class="movements__indicator">
+							<!-- This is the indicator -->
+						</div>
+					</nav>
+				</header>
+				<div class="movements"></div>
+				<div class="movements__balance-data">
+					<div class="balance">
+						<p class="balance__title">Balance</p>
+						<p class="balance__amount">233303$</p>
+					</div>
+
+					<div class="incoming">
+						<p class="incoming__title">Incoming</p>
+						<p class="incoming__amount">100303$</p>
+					</div>
+
+					<div class="outcoming">
+						<p class="outcoming__title">outcoming</p>
+						<p class="outcoming__amount">2333$</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section__actions">
+				<h2 class="section__title">Sendy balance</h2>
+
+				<div class="actions__main">
+					<p class="actions__balance">$233303</p>
+					<canvas id="rive-canvas"></canvas>
+				</div>
+
+				<div
+					role="tablist"
+					class="actions__actions"
+				>
+					<ul>
+						<li data-index="0">
+							<button
+								role="tab"
+								type="button"
+								aria-selected="true"
+								aria-controls="send-tab"
+								id="send-tab-btn"
+							>
+								Send
+							</button>
+						</li>
+						<li data-index="1">
+							<button
+								role="tab"
+								type="button"
+								aria-selected="false"
+								aria-controls="request-tab"
+								id="request-tab-btn"
+							>
+								Request
+							</button>
+						</li>
+					</ul>
+					<div class="actions__indicator"></div>
+				</div>
+
+				<form
+					class="actions__send-tab"
+					id="send-tab"
+				>
+					<label
+						class="visually-hidden"
+						for="actions__amount"
+						>Amount</label
+					>
+					<input
+						class="actions__amount"
+						type="number"
+						name="amount"
+						id="actions__amount"
+						min="1"
+						max="999999999"
+						placeholder="Enter amount"
+						required
+					/>
+					<label
+						class="visually-hidden"
+						for="actions__user "
+						>User</label
+					>
+					<select
+						class="actions__user"
+						name="User"
+						id="actions__user"
+						required
+					>
+						<option value="">Select user</option>
+					</select>
+					<button
+						class="btn btn--primary action__btn"
+						role="send"
+					>
+						Send
+					</button>
+				</form>
+				<p class="actions__message"><br /></p>
+			</section>
+
+			<section class="section__close">
+				<h2 class="section__title">Account</h2>
+
+				<button class="btn btn--primary-red close__btn account__close-btn">
+					wanna leave us?
+				</button>
+			</section>
+		</main>
+
+		<footer></footer>
+
+		<script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

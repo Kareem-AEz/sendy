@@ -1,0 +1,12 @@
+.visually-hidden {
+	height: 0;
+	width: 0;
+	opacity: 0;
+	position: absolute;
+}
+.is-hidden {
+	user-select: none;
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+}

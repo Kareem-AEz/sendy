@@ -1,0 +1,10 @@
+.section__close {
+	display: grid;
+}
+
+.close {
+	&__btn {
+		align-self: center;
+		margin-bottom: auto;
+	}
+}
