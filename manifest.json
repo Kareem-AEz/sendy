@@ -1,15 +1,16 @@
 {
-	"short_name": "Sendy",
 	"name": "Sendy - Manage Your Finances with Ease",
+	"short_name": "Sendy",
+	"start_url": "index.html",
+	"display": "standalone",
+	"background_color": "#2b5869",
+	"theme_color": "#2b5869",
+	"description": "Sendy is a secure and intuitive web app for managing personal finances. Easily send and request money, track transactions, and manage account settings in real-time.",
 	"icons": [
 		{
 			"src": "web-assets/sendy-favicon.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
-	],
-	"start_url": "https://kareem-aez.github.io/sendy/",
-	"display": "standalone",
-	"theme_color": "#2b5869",
-	"background_color": "#2b5869"
+	]
 }
