@@ -62,7 +62,7 @@ const account2 = {
 		outcoming: 7000,
 	}, // Dummy initial balance, will be recalculated
 	movements: () => [...movementsFactory(20, users)],
-	currency: "EGP",
+	currency: "USD",
 	locale: "ar-EG",
 };
 const account3 = {
@@ -74,7 +74,7 @@ const account3 = {
 		outcoming: 7000,
 	}, // Dummy initial balance, will be recalculated
 	movements: () => [...movementsFactory(13, users)],
-	currency: "EGP",
+	currency: "USD",
 	locale: "ar-EG",
 };
 const account4 = {
