@@ -28,6 +28,9 @@ Sendy is a dynamic, interactive web application for managing personal accounts a
 - **Responsive Modals and UI**:
   - Modal pop-ups for account actions and information.
   - Hover and click animations for an engaging experience.
+- **Responsive Modals and UI**:
+  - leveraging the interactivity with rive
+    ![Sportify](GIFs/Sendy-Rive-Show&Hide.gif)
 
 ## Demo
 
@@ -56,15 +59,15 @@ A live demo of Sendy can be accessed [here](#).
 
 ## Code Overview
 
-- **movementsFactory**:
-  -Generates randomized transaction data for accounts.
+- **movementsFactory**: 
+  Generates randomized transaction data for accounts.
 
-- **filterMovements**
-  -Filters transactions based on user-selected criteria, providing options like incoming, outgoing, and request filters.
+- **filterMovements**: 
+  Filters transactions based on user-selected criteria, providing options like incoming, outgoing, and request filters.
 
-- **updateUIBalance**
-  -Displays the latest balance and transaction details in the user interface.
+- **updateUIBalance**: 
+  Displays the latest balance and transaction details in the user interface.
 
-- **actionExcuter**
-  -Handles core actions, such as sending, requesting, and responding to transactions, with validation.
+- **actionExcuter**: 
+  Handles core actions, such as sending, requesting, and responding to transactions, with validation.
 
