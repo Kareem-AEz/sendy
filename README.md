@@ -29,12 +29,12 @@ Sendy is a dynamic, interactive web application for managing personal accounts a
   - Modal pop-ups for account actions and information.
   - Hover and click animations for an engaging experience.
 - **Responsive Modals and UI**:
-  - leveraging the interactivity with rive
-    ![Sportify](GIFs/Sendy-Rive-Show&Hide.gif)
+  - leveraging the interactivity with rive [Check the animaiton](https://rive.app/community/files/13507-26315-hide-button) *(not working as expected)*
+    ![Sendy-Rive Animation](GIFs/Sendy-Rive-Show&Hide.gif)
 
 ## Demo
 
-A live demo of Sendy can be accessed [here](#).
+A live demo of Sendy can be accessed [here]([#](https://kareem-aez.github.io/sendy/)).
 
 ---
 
