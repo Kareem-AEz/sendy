@@ -26,8 +26,13 @@
 		color: inherit;
 
 		border: 2px solid $color-main-blue;
-		padding: 1.8rem 1.8rem;
+		padding: 1.8rem;
 		border-radius: 100%;
+
+		@media (max-width: 49em) {
+			font-size: 3rem;
+			padding: 1.4rem;
+		}
 	}
 
 	&__login {
