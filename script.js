@@ -475,8 +475,8 @@ let fetchedAccount;
 
 btnLogin.addEventListener("click", (e) => {
 	e.preventDefault();
-	const usernameValue = inputUsername.value;
-	const pinValue = +inputPin.value;
+	const usernameValue = inputUsername.value.toLowerCase().trim();
+	const pinValue = +inputPin.value.trim();
 	fetchedAccount = accounts.find(
 		(account) => account.username === usernameValue && account.pin === pinValue
 	);
@@ -718,68 +718,69 @@ let isHidden = false; // Track visibility state
 let isAnimating = false; // Track if animation is ongoing
 
 // Set canvas resolution for clarity
-canvas.width = 84; 
+canvas.width = 84;
 canvas.height = 84;
 canvas.style.width = "4.2rem";
 canvas.style.height = "4.2rem";
 
 const r = new rive.Rive({
-    src: "Assets/riv/show_&_hide.riv",
-    canvas: canvas,
-    autoplay: false,
-    stateMachines: "State Machine 1",
-    fit: rive.Fit.cover,
-    
-    onLoad: () => {
-        r.resizeDrawingSurfaceToCanvas();
+	src: "Assets/riv/show_&_hide.riv",
+	canvas: canvas,
+	autoplay: false,
+	stateMachines: "State Machine 1",
+	fit: rive.Fit.cover,
 
-        const inputs = r.stateMachineInputs("State Machine 1");
-        const hoverInput = inputs.find((i) => i.name === "hover");
-        const clickInput = inputs.find((i) => i.name === "click");
+	onLoad: () => {
+		r.resizeDrawingSurfaceToCanvas();
 
-        // Confirm inputs are found
-        console.log(inputs, hoverInput, clickInput);
+		const inputs = r.stateMachineInputs("State Machine 1");
+		const hoverInput = inputs.find((i) => i.name === "hover");
+		const clickInput = inputs.find((i) => i.name === "click");
 
-        // Handle hover for desktop and touchstart for mobile
-        const startHover = () => {
-            if (hoverInput && !isAnimating) {
-                hoverInput.value = true;
-                r.play();
-            }
-        };
+		// Confirm inputs are found
+		console.log(inputs, hoverInput, clickInput);
 
-        const endHover = () => {
-            if (hoverInput && !isAnimating) {
-                hoverInput.value = false;
-                r.play();
-            }
-        };
+		// Handle hover for desktop and touchstart for mobile
+		const startHover = () => {
+			if (hoverInput && !isAnimating) {
+				hoverInput.value = true;
+				r.play();
+			}
+		};
 
-        canvas.addEventListener("mouseenter", startHover);
-        canvas.addEventListener("mouseleave", endHover);
-        canvas.addEventListener("touchstart", startHover);
-        canvas.addEventListener("touchend", endHover);
+		const endHover = () => {
+			if (hoverInput && !isAnimating) {
+				hoverInput.value = false;
+				r.play();
+			}
+		};
 
-        // Handle click events for both desktop and mobile with debounce
-        const handleClick = () => {
-            if (!isAnimating) { 
-                isAnimating = true; // Block further clicks during animation
-                isHidden = !isHidden; 
-                hideBalance(isHidden); // Update balance visibility
+		canvas.addEventListener("mouseenter", startHover);
+		canvas.addEventListener("mouseleave", endHover);
+		canvas.addEventListener("touchstart", startHover);
+		canvas.addEventListener("touchend", endHover);
 
-                if (clickInput) clickInput.fire();
-                r.play();
+		// Handle click events for both desktop and mobile with debounce
+		const handleClick = () => {
+			if (!isAnimating) {
+				isAnimating = true; // Block further clicks during animation
+				isHidden = !isHidden;
+				hideBalance(isHidden); // Update balance visibility
 
-                // Reset animation state after 1s (animation duration)
-                setTimeout(() => { isAnimating = false; }, 1000);
-            }
-        };
+				if (clickInput) clickInput.fire();
+				r.play();
 
-        canvas.addEventListener("click", handleClick);
-        canvas.addEventListener("touchend", handleClick); // Trigger on touchend for mobile
-    },
+				// Reset animation state after 1s (animation duration)
+				setTimeout(() => {
+					isAnimating = false;
+				}, 1000);
+			}
+		};
+
+		canvas.addEventListener("click", handleClick);
+		canvas.addEventListener("touchend", handleClick); // Trigger on touchend for mobile
+	},
 });
-
 
 /* -------------------- action navingatoin side -------------------- */
 const navActions = document.querySelector(".actions__actions");
@@ -1267,6 +1268,7 @@ modalWindow.addEventListener("click", (e) => {
 	if (clicked === btnModalClose) {
 		console.log("closed");
 		modalAccountTrigger("remove");
+		modalCheckbox.classList.remove("focus");
 	}
 
 	//modal checkbox
@@ -1305,6 +1307,7 @@ modalWindow.addEventListener("click", (e) => {
 		if (role === "cancel") {
 			modalAccountTrigger("remove");
 			modalinfoTrigger("remove");
+			modalCheckbox.classList.remove("focus");
 		}
 	}
 
@@ -1313,6 +1316,7 @@ modalWindow.addEventListener("click", (e) => {
 		console.log("modal background");
 		modalAccountTrigger("remove");
 		modalinfoTrigger("remove");
+		modalCheckbox.classList.remove("focus");
 	}
 });
 

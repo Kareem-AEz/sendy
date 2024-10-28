@@ -85,7 +85,7 @@
 
 .focus {
 	outline: 2px solid $color-main-blue; /* Add your desired focus style */
-	box-shadow: 0 0 5px $color-main-blue;
+	box-shadow: 0 0 0.5rem $color-main-blue;
 }
 
 .modal__info {
@@ -97,13 +97,13 @@
 	}
 	&::-webkit-scrollbar-track {
 		background-color: $color-grey-200;
-		border-radius: 8px;
+		border-radius: 0.8rem;
 	}
 
 	&::-webkit-scrollbar-thumb {
 		background-color: $color-grey-500;
-		border-radius: 10px;
-		border: 2px solid transparent;
+		border-radius: 1rem;
+		border: 0.2rem solid transparent;
 	}
 
 	&::-webkit-scrollbar-thumb:hover {

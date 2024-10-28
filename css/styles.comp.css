@@ -288,7 +288,7 @@ select {
 .focus {
   outline: 2px solid #2b5869;
   /* Add your desired focus style */
-  box-shadow: 0 0 5px #2b5869; }
+  box-shadow: 0 0 0.5rem #2b5869; }
 
 .modal__info {
   overflow: scroll;
@@ -302,11 +302,11 @@ select {
     height: 1rem; }
   .modal__info::-webkit-scrollbar-track {
     background-color: #dadada;
-    border-radius: 8px; }
+    border-radius: 0.8rem; }
   .modal__info::-webkit-scrollbar-thumb {
     background-color: #888;
-    border-radius: 10px;
-    border: 2px solid transparent; }
+    border-radius: 1rem;
+    border: 0.2rem solid transparent; }
   .modal__info::-webkit-scrollbar-thumb:hover {
     background-color: #666; }
   .modal__info-wrapper {
@@ -502,14 +502,14 @@ footer {
   border-radius: 1.4rem;
   overflow: auto; }
   .movements::-webkit-scrollbar {
-    width: 10px; }
+    width: 1rem; }
   .movements::-webkit-scrollbar-track {
     background-color: #dadada;
-    border-radius: 8px; }
+    border-radius: 0.8rem; }
   .movements::-webkit-scrollbar-thumb {
     background-color: #888;
-    border-radius: 10px;
-    border: 2px solid transparent; }
+    border-radius: 1rem;
+    border: 0.2rem solid transparent; }
   .movements::-webkit-scrollbar-thumb:hover {
     background-color: #666; }
 
