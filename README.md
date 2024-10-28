@@ -46,25 +46,25 @@ A live demo of Sendy can be accessed [here](#).
 
 ## Usage
 
-- **Login: Use a sample account to log in. Available usernames are listed in the accounts data.
-- **Send Money: Enter a recipient username and amount to send funds.
-- **Request Money: Switch to “Request” mode to request funds from other users.
-- **View Transactions: Use the filter navigation to sort transactions based on type.
-- **Close Account: Option to close the current account with handling for remaining balance.
+- **Login:** Use a sample account to log in. Available usernames are listed in the accounts data.
+- **Send Money:** Enter a recipient username and amount to send funds.
+- **Request Money:** Switch to “Request” mode to request funds from other users.
+- **View Transactions:** Use the filter navigation to sort transactions based on type.
+- **Close Account:** Option to close the current account with handling for remaining balance.
 
 ---
 
 ## Code Overview
 
-- **movementsFactory
-Generates randomized transaction data for accounts.
+- **movementsFactory**:
+  -Generates randomized transaction data for accounts.
 
-- **filterMovements
-Filters transactions based on user-selected criteria, providing options like incoming, outgoing, and request filters.
+- **filterMovements**
+  -Filters transactions based on user-selected criteria, providing options like incoming, outgoing, and request filters.
 
-- **updateUIBalance
-Displays the latest balance and transaction details in the user interface.
+- **updateUIBalance**
+  -Displays the latest balance and transaction details in the user interface.
 
-- **actionExcuter
-Handles core actions, such as sending, requesting, and responding to transactions, with validation.
+- **actionExcuter**
+  -Handles core actions, such as sending, requesting, and responding to transactions, with validation.
 
