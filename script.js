@@ -854,7 +854,7 @@ const actionExcuter = ({ username, amount, role, userDestination }) => {
 	console.log(role);
 
 	if (role === "send") {
-		if (fetchedAccount.balance.currentBalance > amount) {
+		if (fetchedAccount.balance.currentBalance >= amount) {
 			console.log(userDestination);
 
 			//the balance should be deducted from this account
