@@ -1137,8 +1137,8 @@ accountCloseBtn.addEventListener("click", () => {
 			your account will be closed forever. Are you sure you want to
 			proceed and donate the balance?`;
 	accountBalance < 0
-		? modalCheckbox.classList.remove("is-hidden")
-		: modalCheckbox.classList.add("is-hidden");
+		? modalCheckbox.classList.add("is-hidden")
+		: modalCheckbox.classList.remove("is-hidden");
 
 	modalButtonsWrapper.innerHTML =
 		accountBalance < 0
