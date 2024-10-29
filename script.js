@@ -1112,13 +1112,22 @@ accountCloseBtn.addEventListener("click", () => {
 	const accountBalance = fetchedAccount.balance.currentBalance;
 
 	modalTitle.innerHTML =
-		accountBalance > 0
-			? "Close Account – Donation of Remaining Balance"
-			: "Close Account – Negative Balance Alert";
+		accountBalance < 0
+			? "Close Account – Negative Balance Alert"
+			: "Close Account – Donation of Remaining Balance";
 
 	modalContent.innerHTML =
-		accountBalance > 0
-			? `
+		accountBalance < 0
+			? 
+
+		`
+			Your account has a negative balance of <strong>${accountBalance.toLocaleString(
+				fetchedAccount.locale,
+				{ style: "currency", currency: fetchedAccount.currency }
+			)}</strong> You must settle this balance before closing your account. Please add funds to bring your account to a zero or positive balance before proceeding.
+`
+			:
+		`
 			You have a balance of <strong>${accountBalance.toLocaleString(
 				fetchedAccount.locale,
 				{ style: "currency", currency: fetchedAccount.currency }
@@ -1126,20 +1135,22 @@ accountCloseBtn.addEventListener("click", () => {
 			closing your account, the remaining balance will be automatically
 			donated to <strong>Charity</strong>. This action is permanent, and
 			your account will be closed forever. Are you sure you want to
-			proceed and donate the balance?`
-			: `
-			Your account has a negative balance of <strong>${accountBalance.toLocaleString(
-				fetchedAccount.locale,
-				{ style: "currency", currency: fetchedAccount.currency }
-			)}</strong> You must settle this balance before closing your account. Please add funds to bring your account to a zero or positive balance before proceeding.
-`;
-	accountBalance > 0
+			proceed and donate the balance?`;
+	accountBalance < 0
 		? modalCheckbox.classList.remove("is-hidden")
 		: modalCheckbox.classList.add("is-hidden");
 
 	modalButtonsWrapper.innerHTML =
-		accountBalance > 0
-			? `<button
+		accountBalance < 0
+			?
+		`<button
+							role="cancel"
+							class="btn btn--primary"
+						>
+							Add funds
+						</button>`
+			: 
+		 `<button
 							role="cancel"
 							class="btn btn--primary-light"
 						>
@@ -1150,12 +1161,6 @@ accountCloseBtn.addEventListener("click", () => {
 							class="btn btn--primary-red"
 						>
 							Leave Sendy
-						</button>`
-			: `<button
-							role="cancel"
-							class="btn btn--primary"
-						>
-							Add funds
 						</button>`;
 
 	modalAccountTrigger("show");
